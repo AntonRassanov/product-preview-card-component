@@ -17,14 +17,19 @@
 </head>
 <body>
   <main class="product-card">
-    <img
-      src="./images/image-product-mobile.avif"
-      alt="product image"
-      srcset="./images/image-product-mobile.avif 50%,
-              ./images/image-product-desktop.avif 100w"
-      sizes="(min-width: 767px) 50%,
-              100vw"
-      class="product-featured-image">
+    <picture>
+      <source srcset="./images/image-product-mobile.avif" type="image/avif" media="(max-width: 767px)">
+      <source srcset="./images/image-product-mobile.webp" type="image/webp" media="(max-width: 767px)">
+      <source srcset="./images/image-product-mobile.jpg" type="image/jpeg" media="(max-width: 767px)">
+      <source srcset="./images/image-product-desktop.avif" type="image/avif">
+      <source srcset="./images/image-product-desktop.webp" type="image/webp">
+      <img
+        src="./images/image-product-desktop.jpg"
+        alt="product image"
+        width="600"
+        height="900"
+        class="product-featured-image">
+    </picture>
     <div class="product-info">
       <h2 class="product-category">perfume</h3>
       <h1 class="product-title">Gabrielle Essence Eau De Parfum</h2>
