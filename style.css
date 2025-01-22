@@ -74,13 +74,17 @@ body {
 }
 
 .product-featured-image {
-    inline-size: 100%;
     max-inline-size: 50%;
+    flex-shrink: 0;
+}
+
+.product-featured-image img {
+    inline-size: 100%;
     block-size: auto;
     -o-object-fit: cover;
-       object-fit: cover;
+        object-fit: cover;
     -o-object-position: center;
-       object-position: center;
+        object-position: center;
 }
 
 .product-info {
