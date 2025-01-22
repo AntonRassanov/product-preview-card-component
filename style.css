@@ -4,6 +4,39 @@
             box-sizing: border-box;
 }
 
+/* Typography */
+body {
+    font-family: 'Montserrat';
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: 0;
+}
+
+h1 {
+    font-family: 'Fraunces';
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+h2 {
+    text-transform: uppercase;
+    letter-spacing: .25em;
+}
+
+.product-new-price {
+    font-family: 'Fraunces';
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.product-add-to-cart {
+    font-family: 'Montserrat';
+    font-size: .875rem;
+    font-weight: 500;
+}
+
 /* Body and layout */
 body {
     --primary-darkCyan: hsl(158, 36%, 37%);
@@ -14,14 +47,9 @@ body {
     --seocndary-darkerCyan: hsl(158, 36%, 27%);
     --borderRadiusS: 8px;
     --borderRadiusM: 20px;
-    font-family: 'Montserrat';
-    font-size: .875rem;
-    font-weight: 500;
-    line-height: 140%;
-    letter-spacing: 0;
     background-color: var( --primary-cream );
     color: var( --secondary-darkGrayishBlue );
-    padding-block: 12.5em;
+    padding: 12.5em 1.143em;;
 }
 
 .product-card {
@@ -38,7 +66,6 @@ body {
 
 .product-featured-image {
     max-inline-size: 50%;
-    aspect-ratio: 0,67 / 1;
     object-fit: cover;
     object-position: center;
 }
@@ -49,34 +76,25 @@ body {
     justify-content: flex-start;
     align-items: center;
     align-content: center;
-    gap: 20px 15px;
+    gap: 1.429em 1.071em;
     padding: 2.143em;
 }
 
 .product-category {
-    text-transform: uppercase;
-    letter-spacing: .25em;
     inline-size: 100%;
 }
 
 .product-title {
-    font-family: 'Fraunces';
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 120%;
     color: var( --secondary-veryDarkBlue );
     inline-size: 100%;
 }
 
 .product-excerpt {
     inline-size: 100%;
-    margin-block-end: 5px;
+    margin-block-end: .357em;
 }
 
 .product-new-price {
-    font-family: 'Fraunces';
-    font-size: 2rem;
-    font-weight: 700;
     color: var( --primary-darkCyan );
 }
 
@@ -85,9 +103,6 @@ body {
 }
 
 .product-add-to-cart {
-    font-family: 'Montserrat';
-    font-size: .875rem;
-    font-weight: 500;
     border-radius: var( --borderRadiusS );
     padding: 1em;
     color: var( --secondary-white );
@@ -96,10 +111,9 @@ body {
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    box-shadow: none; 
+    gap: .714em;
     inline-size: 100%;
-    margin-block-start: 5px;
+    margin-block-start: .357em;
     transition: all ease .3s;
 }
 
@@ -107,10 +121,35 @@ body {
     background-color: var( --seocndary-darkerCyan );
 }
 
-.product-add-to-cart span:before {
-    content: '';
-    display: inline-block;
-    inline-size: 1rem;
-    aspect-ratio: 1;
-    background-image: url( ./images/icon-cart.svg);
+@media screen and (max-width: 767px) {
+    body {
+        padding: 2em 1.143em;
+    }
+
+    .product-card {
+        max-inline-size: 100%;
+        flex-flow: row wrap;
+    }
+
+    .product-featured-image {
+        max-inline-size: 100%;
+        aspect-ratio: 1.43 / 1;
+    }
+
+    .product-info {
+        padding: 1.786em;
+        gap: .714em 1.071em;
+    }
+
+    .product-title {
+        margin-block-end: .357em;
+    }
+
+    .product-excerpt {
+        margin-block-end: 1.071em;
+    }
+
+    .product-add-to-cart {
+        margin-block-start: .357em;
+    }
 }
