@@ -1,0 +1,116 @@
+/* Base styles */
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+/* Body and layout */
+body {
+    --primary-darkCyan: hsl(158, 36%, 37%);
+    --primary-cream: hsl(30, 38%, 92%);
+    --secondary-veryDarkBlue: hsl(212, 21%, 14%);
+    --secondary-darkGrayishBlue: hsl(228, 12%, 48%);
+    --secondary-white: hsl(0, 0%, 100%);
+    --seocndary-darkerCyan: hsl(158, 36%, 27%);
+    --borderRadiusS: 8px;
+    --borderRadiusM: 20px;
+    font-family: 'Montserrat';
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: 0;
+    background-color: var( --primary-cream );
+    color: var( --secondary-darkGrayishBlue );
+    padding-block: 12.5em;
+}
+
+.product-card {
+    max-inline-size: 42.857em;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-self: stretch;
+    border-radius: var( --borderRadiusM );
+    background-color: var( --secondary-white );
+    overflow: hidden;
+}
+
+.product-featured-image {
+    max-inline-size: 50%;
+    aspect-ratio: 0,67 / 1;
+    object-fit: cover;
+    object-position: center;
+}
+
+.product-info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    gap: 20px 15px;
+    padding: 2.143em;
+}
+
+.product-category {
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    inline-size: 100%;
+}
+
+.product-title {
+    font-family: 'Fraunces';
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 120%;
+    color: var( --secondary-veryDarkBlue );
+    inline-size: 100%;
+}
+
+.product-excerpt {
+    inline-size: 100%;
+    margin-block-end: 5px;
+}
+
+.product-new-price {
+    font-family: 'Fraunces';
+    font-size: 2rem;
+    font-weight: 700;
+    color: var( --primary-darkCyan );
+}
+
+.product-old-price {
+    text-decoration: line-through;
+}
+
+.product-add-to-cart {
+    font-family: 'Montserrat';
+    font-size: .875rem;
+    font-weight: 500;
+    border-radius: var( --borderRadiusS );
+    padding: 1em;
+    color: var( --secondary-white );
+    background-color: var( --primary-darkCyan );
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-shadow: none; 
+    inline-size: 100%;
+    margin-block-start: 5px;
+    transition: all ease .3s;
+}
+
+.product-add-to-cart:hover {
+    background-color: var( --seocndary-darkerCyan );
+}
+
+.product-add-to-cart span:before {
+    content: '';
+    display: inline-block;
+    inline-size: 1rem;
+    aspect-ratio: 1;
+    background-image: url( ./images/icon-cart.svg);
+}
